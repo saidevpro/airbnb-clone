@@ -1,9 +1,7 @@
-import './App.css'
-
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <h1 className="text-4xl text-center">Hello World</h1>
     </div>
   )
 }
