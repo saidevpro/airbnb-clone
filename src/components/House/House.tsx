@@ -1,9 +1,9 @@
 type HouseProps = {
-  adress: String
-  name: String
-  dates: [String, String]
+  adress: string
+  name: string
+  dates: [string, string]
   price: number
-  currency?: String
+  currency?: string
 }
 
 const House = ({

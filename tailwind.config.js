@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./src/**/*.tsx'],
   theme: {
-    extend: {}
+    extend: {
+      flex: {
+        full: '0 0 100%'
+      }
+    }
   },
   plugins: []
 }

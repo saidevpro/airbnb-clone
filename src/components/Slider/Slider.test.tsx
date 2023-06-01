@@ -1,7 +1,7 @@
 import { screen, render } from '@testing-library/react'
 import Slider from './Slider'
 
-describe('<Slider /> Component', function () {
+describe('<Slider /> Component', () => {
   it('Render in the document', () => {
     render(
       <Slider
@@ -58,7 +58,7 @@ describe('<Slider /> Pagination', () => {
   it('Show pagination when enabled', () => {
     render(
       <Slider
-        enablePagination={true}
+        pagination={true}
         images={[
           {
             src: 'image1.png'
@@ -91,7 +91,7 @@ describe('<Slider /> Navigation', () => {
   it('Show Navigation when enabled', () => {
     render(
       <Slider
-        enableNavigation={true}
+        navigation={true}
         images={[
           {
             src: 'image1.png'
@@ -107,7 +107,7 @@ describe('<Slider /> Navigation', () => {
   it('Display prevArrow & nextArrow in navigation', () => {
     render(
       <Slider
-        enableNavigation={true}
+        navigation={true}
         prevArrow={<div>prev arrow test</div>}
         nextArrow={<div>next arrow test</div>}
         images={[
