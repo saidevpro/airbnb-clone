@@ -1,28 +1,25 @@
-import Slider from './components/Slider/Slider'
-import SliderItem from './components/Slider/SliderItem'
-import { ArrowLeft, ArrowRight } from './components/ui/Arrow'
-import Img from './components/ui/Img'
-import { generateImages } from './fixtures/images'
-
-const images = generateImages(4)
+import NavTab from './components/NavTab/NavTab'
+import NavTabList from './components/NavTab/NavTabList'
+import NavTabItem from './components/NavTab/NavTabItem'
 
 const App = () => {
   return (
     <div className="App">
       <h1 className="text-4xl text-center">Hello World</h1>
       <br />
-      <Slider
-        navigation={true}
-        pagination={true}
-        prevArrow={<ArrowLeft size={30} className="text-white" />}
-        nextArrow={<ArrowRight size={30} className="text-white" />}
-      >
-        {images.map(({ src, caption }) => (
-          <SliderItem key={src}>
-            <Img src={src} caption={caption} />
-          </SliderItem>
-        ))}
-      </Slider>
+      <NavTab>
+        <NavTabList>
+          <NavTabItem title={<h6>Tab#1</h6>}>
+            <p role="paragraph">Content Tab 1</p>
+          </NavTabItem>
+          <NavTabItem title={<h6>Tab#2</h6>}>
+            <p role="paragraph">Content Tab 2</p>
+          </NavTabItem>
+          <NavTabItem title={<h6>Tab#3</h6>}>
+            <p role="paragraph">Content Tab 3</p>
+          </NavTabItem>
+        </NavTabList>
+      </NavTab>
     </div>
   )
 }
