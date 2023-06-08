@@ -9,7 +9,7 @@ import React, {
 import {
   ArrowLeft as DefaultPrevArrow,
   ArrowRight as DefaultNextArrow
-} from '../ui/Arrow'
+} from '../UI/Arrow'
 
 type SliderPropsType = {
   pagination?: boolean
