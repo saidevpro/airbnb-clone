@@ -5,13 +5,6 @@
   "rules": {
     // Add your rules here
     "indent": ["error", 2, { "ignoredNodes": ["ConditionalExpression"] }],
-    "space-before-function-paren": [
-      "error",
-      {
-        "anonymous": "never",
-        "named": "never",
-        "asyncArrow": "never"
-      }
-    ]
+    "space-before-function-paren": ["error", "never"]
   }
 }
