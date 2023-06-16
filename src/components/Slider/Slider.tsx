@@ -1,6 +1,7 @@
 import React, {
   FunctionComponent,
   PropsWithChildren,
+  useCallback,
   useEffect,
   useMemo,
   useRef,
@@ -55,13 +56,13 @@ const Slider: FunctionComponent<PropsWithChildren<SliderPropsType>> = ({
     return SliderWidth.current * step
   }, [step])
 
-  const handlePrevSlide = () => {
+  const handlePrevSlide = useCallback(() => {
     setStep((prevStep) => Math.max(0, prevStep - 1))
-  }
+  }, [])
 
-  const handleNextSlide = () => {
+  const handleNextSlide = useCallback(() => {
     setStep((prevStep) => Math.min(slideCount - 1, prevStep + 1))
-  }
+  }, [])
 
   return (
     <div

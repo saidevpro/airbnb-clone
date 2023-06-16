@@ -1,5 +1,5 @@
 import { render, waitFor } from '@testing-library/react'
-import useApiSearch from '../useApiSearch'
+import useApiSearch from '../use-api-search'
 import { act } from 'react-dom/test-utils'
 import { useEffect, useState } from 'react'
 
